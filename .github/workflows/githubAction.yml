@@ -2,7 +2,7 @@ name: GitHub Actions
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Unit Testing
       - uses: actions/checkout@v2.1.0
