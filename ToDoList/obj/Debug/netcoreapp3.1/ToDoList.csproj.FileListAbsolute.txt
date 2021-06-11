@@ -186,7 +186,6 @@ E:\RepoGit\ToDoList\ToDoList\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.VisualStu
 E:\RepoGit\ToDoList\ToDoList\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 E:\RepoGit\ToDoList\ToDoList\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 E:\RepoGit\ToDoList\ToDoList\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-E:\RepoGit\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.csprojAssemblyReference.cache
 E:\RepoGit\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.AssemblyInfoInputs.cache
 E:\RepoGit\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.AssemblyInfo.cs
 E:\RepoGit\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.csproj.CoreCompileInputs.cache
@@ -194,3 +193,4 @@ E:\RepoGit\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.csproj.CopyComplet
 E:\RepoGit\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.dll
 E:\RepoGit\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.pdb
 E:\RepoGit\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.genruntimeconfig.cache
+E:\RepoGit\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.csproj.AssemblyReference.cache
