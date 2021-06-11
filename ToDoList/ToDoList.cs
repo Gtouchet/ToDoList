@@ -3,33 +3,58 @@ using System.Collections.Generic;
 
 namespace ToDoList
 {
-    public class ToDoList
+    public interface IToDoList
     {
-        public List<Item> items = new List<Item>();
+        public List<IItem> items { get; set; }
+        public bool mailSent { get; set; }
 
-        public ToDoList() { }
+        public bool AddItem(IItem item);
+        public bool IsItemCreationPossible();
+        public bool IsValid();
+        public void SendMail();
+    }
 
-        public void AddItem(List<Item> items, Item item)
+    public class ToDoList : IToDoList
+    {
+        public List<IItem> items { get; set; } = new List<IItem>();
+        public bool mailSent { get; set; } = false;
+
+        public bool AddItem(IItem item)
         {
-            items.Add(item);
-            if (items.Count == 8)
+            if (this.IsItemCreationPossible() && item.IsValid())
             {
-                this.SendMail();
+                this.items.Add(item);
+                
+                if (this.items.Count == 8)
+                {
+                    this.SendMail();
+                }
+
+                return true;
             }
+
+            return false;
         }
 
-        public bool isItemsValid(List<Item> items)
+        public bool IsItemCreationPossible()
         {
-            if (items.Count > 10)
+            return this.items.Count == 0
+                || (this.items.Count < 10
+                && (DateTime.Now - this.items[this.items.Count - 1].creationDate).TotalMinutes > 30); // [this.items.Count - 1] -> last item added to the list
+        }
+
+        public bool IsValid()
+        {
+            if (this.items.Count > 10)
             {
                 return false;
             }
 
-            foreach (Item item in items)
+            // Useless verification since it is impossible to add an invalid item in the list
+            // Unless force pushing in the list with items.Add()
+            foreach (IItem item in this.items)
             {
-                if (!string.IsNullOrEmpty(item.name)
-                    || item.content.Length > 1000
-                    || item.creationDate == null)
+                if (!item.IsValid())
                 {
                     return false;
                 }
@@ -38,22 +63,12 @@ namespace ToDoList
             return true;
         }
 
-        public bool isCreationPossible(Item lastCreatedItem)
+        public void SendMail()
         {
-            return new DateTime(DateTime.Now.Subtract(lastCreatedItem.creationDate).Ticks).Minute - 1 > 30;
+            /**
+             * A piece of code using a nice API to send a mail to the customer
+             **/
+            this.mailSent = true;
         }
-
-        public bool SendMail()
-        {
-            Console.WriteLine("you've got mail");
-            return true;
-        }
-    }
-
-    public class Item
-    {
-        public string name { get; set; }
-        public string content { get; set; }
-        public DateTime creationDate { get; set; }
     }
 }

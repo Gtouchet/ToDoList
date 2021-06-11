@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\RepoGit\\ToDoList\\ToDoList\\ToDoList.csproj": {}
+    "E:\\RepoGit\\ToDoList\\ToDoList\\ToDoList.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\RepoGit\\ToDoList\\ToDoList\\ToDoList.csproj": {
+    "E:\\RepoGit\\ToDoList\\ToDoList\\ToDoList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\RepoGit\\ToDoList\\ToDoList\\ToDoList.csproj",
+        "projectUniqueName": "E:\\RepoGit\\ToDoList\\ToDoList\\ToDoList.csproj",
         "projectName": "ToDoList",
-        "projectPath": "D:\\Documents\\RepoGit\\ToDoList\\ToDoList\\ToDoList.csproj",
+        "projectPath": "E:\\RepoGit\\ToDoList\\ToDoList\\ToDoList.csproj",
         "packagesPath": "C:\\Users\\Guillaume\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\RepoGit\\ToDoList\\ToDoList\\obj\\",
+        "outputPath": "E:\\RepoGit\\ToDoList\\ToDoList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Guillaume\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -56,6 +57,10 @@
               "target": "Package",
               "version": "[16.7.1, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
+            },
             "coverlet.collector": {
               "target": "Package",
               "version": "[1.3.0, )"
@@ -76,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

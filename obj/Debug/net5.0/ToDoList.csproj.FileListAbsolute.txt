@@ -1,0 +1,7 @@
+E:\RepoGit\ToDoList\obj\Debug\net5.0\ToDoList.csprojAssemblyReference.cache
+E:\RepoGit\ToDoList\obj\Debug\net5.0\ToDoList.GeneratedMSBuildEditorConfig.editorconfig
+E:\RepoGit\ToDoList\obj\Debug\net5.0\ToDoList.AssemblyInfoInputs.cache
+E:\RepoGit\ToDoList\obj\Debug\net5.0\ToDoList.AssemblyInfo.cs
+E:\RepoGit\ToDoList\obj\Debug\net5.0\ToDoList.csproj.CoreCompileInputs.cache
+E:\RepoGit\ToDoList\obj\Debug\net5.0\ToDoList.MvcApplicationPartsAssemblyInfo.cs
+E:\RepoGit\ToDoList\obj\Debug\net5.0\ToDoList.MvcApplicationPartsAssemblyInfo.cache

@@ -3,6 +3,18 @@ using EmailValidation;
 
 namespace ToDoList
 {
+    public interface IUser
+    {
+        public string mailAddress { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string password { get; set; }
+        public DateTime birthDate { get; set; }
+        public ToDoList toDoList { get; set; }
+
+        public bool IsValid();
+    }
+
     public class User : IUser
     {
         public string mailAddress { get; set; }
@@ -28,18 +40,18 @@ namespace ToDoList
             return EmailValidator.Validate(this.mailAddress)
                 && !string.IsNullOrEmpty(this.firstName)
                 && !string.IsNullOrEmpty(this.lastName)
-                && IsPasswordValid(this.password)
-                && IsBirthDateValid(this.birthDate);
+                && this.IsPasswordValid()
+                && this.IsBirthDateValid();
         }
 
-        public bool IsPasswordValid(string password)
+        public bool IsPasswordValid()
         {
-            return password.Length >= 8 && password.Length <= 40;
+            return this.password.Length >= 8 && this.password.Length <= 40;
         }
 
-        public bool IsBirthDateValid(DateTime birthDate)
+        public bool IsBirthDateValid()
         {
-            return new DateTime(DateTime.Now.Subtract(birthDate).Ticks).Year - 1 > 13;
+            return new DateTime(DateTime.Now.Subtract(this.birthDate).Ticks).Year - 1 > 13;
         }
     }
 }
