@@ -16,10 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Setup .NET Core SDK
+      - name: Setting up .NET Core SDK v3.1.x
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 3.1.x
     
-      - name: Tests
+      - name: Running tests
         run: dotnet test
